@@ -45,9 +45,7 @@ body {
   color: var(--textalt) !important;
 }
 
-/* Override Bootstrap Defaults for Apple HIG Typography */
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--text);
 }
@@ -197,62 +195,38 @@ a:hover {
   color: #1c1c1e; /* Hardcoded dark text for excellent contrast against light hover backgrounds */
 }
 
-/* ===== Business Card Layout (About Us) ===== */
-.bcard, .hcard {
+/* ===== Card Overrides ===== */
+.hcard {
   border-radius: 28px !important;
+  min-height: 420px;
 }
 
-.bcard {
-  background-color: var(--cardbg);
-  overflow: hidden;
-  box-shadow: 0 4px 20px #0000000D;
-  border: 0;
-}
-
-.bcvl {
-  position: absolute;
+/* About Us card utility classes */
+.bclabel {
+  color: var(--primary);
   top: 48px;
   left: 32px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  text-transform: uppercase;
-  font-weight: 700;
   letter-spacing: 4.8px;
-  color: var(--primary);
   font-size: 13.6px;
 }
-.bcaw {
-  padding-left: 32px;
-}
-.bcn {
+.bcname {
   font-size: 35.2px;
   letter-spacing: -0.48px;
 }
-.bcdr {
-  display: flex;
-  align-items: flex-start;
+.bcrow {
   font-size: 15.2px;
 }
-.bcdl {
-  font-weight: 700;
-  text-transform: uppercase;
+.bckey {
   color: var(--primary);
   width: 80px;
-  flex-shrink: 0;
   letter-spacing: 0.8px;
-  margin-top: 2.4px; /* Optical alignment with text */
+  margin-top: 2.4px;
 }
-.bcds {
-  margin: 2.4px 12px 0 12px;
+.bcsep {
   color: var(--border);
-}
-.bcdv {
-  color: var(--textalt);
-  line-height: 1.6;
-}
-/* ===== Hobby Card Override ===== */
-.hcard {
-  min-height: 420px;
+  margin-top: 2.4px;
 }
 
 /* ===== Flip Cards (Highlights) ===== */
@@ -422,8 +396,7 @@ a:hover {
 }
 .mtl { height: 32px; width: 72px; }
 .mtl .mtk { height: 24px; width: 24px; }
-.mts { height: 24px; width: 50px; }
-.mts .mtk { height: 18px; width: 18px; }
+
 
 .mti {
   pointer-events: none;
@@ -455,7 +428,7 @@ a:hover {
   background: #d4a017;
 }
 [data-mode="chess"] .mtl .mtk { transform: translateX(40px); }
-[data-mode="chess"] .mts .mtk { transform: translateX(26px); }
+
 
 
 /* ===== Reveal Animations ===== */
@@ -494,8 +467,7 @@ a:hover {
   margin-bottom: 8px;
 }
 
-.form-control,
-.form-select {
+.form-control {
   background-color: var(--surfacealt);
   border: 1px solid var(--border);
   color: var(--text);
@@ -504,15 +476,13 @@ a:hover {
   transition: all 0.2s ease;
 }
 
-.form-control:focus,
-.form-select:focus {
+.form-control:focus {
   background-color: var(--surface);
   border-color: var(--primary);
   box-shadow: 0 0 0 3px #1E6FBF33;
 }
 
-[data-mode="chess"] .form-control:focus,
-[data-mode="chess"] .form-select:focus {
+[data-mode="chess"] .form-control:focus {
   box-shadow: 0 0 0 3px #BBAB8633;
 }
 
@@ -526,17 +496,3 @@ a:hover {
   margin-top: 8px;
 }
 
-/* Ensure modal looks good in dark mode */
-[data-mode="chess"] .modal-content {
-  background-color: var(--surface);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-[data-mode="chess"] .modal-header {
-  border-bottom-color: var(--border);
-}
-
-[data-mode="chess"] .modal-footer {
-  border-top-color: var(--border);
-}

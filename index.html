@@ -22,41 +22,22 @@
           <a href="./about.html" class="nav-link">About</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle dtl" href="javascript:void(0)" data-bs-toggle="dropdown">Volleyball</a>
+          <a class="nav-link dropdown-toggle dtl" href="javascript:void(0)" data-bs-toggle="dropdown">Chess</a>
           <ul class="dmenu dropdown-menu">
             <li><a class="dropdown-item" href="./chess_matches.html">Matches</a></li>
+            <li><a class="dropdown-item" href="./chess_openings.html">Openings</a></li>
           </ul>
         </li>
       </ul>
       <div class="d-flex align-items-center">
         <!-- Mode Toggle -->
-        <button type="button" class="mtn mt mtl ms-md-3">
-          <span class="mti">
-            <svg class="mtiv" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-              <path d="M2 12h20" />
-            </svg>
-            <svg class="mtic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
-              <path d="M5 21h14" />
-            </svg>
-          </span>
-          <span class="mtk"></span>
-        </button>
+        <button type="button" class="mtn mt mtl ms-md-3"></button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ============================================== -->
-    <!-- HERO SECTION                                   -->
-    <!-- The big introductory banner at the top of the  -->
-    <!-- page with the image and main title.            -->
-    <!-- ============================================== -->
+    <!-- Hero section, image reveal different mode image as preview -->
     <section class="hero tmt">
       <div class="container-fluid p-0">
         <div class="row g-0">
@@ -90,105 +71,66 @@
       </div>
     </section>
 
-    <!-- ============================================== -->
-    <!-- ABOUT US SECTION                               -->
-    <!-- The section displaying the business cards for  -->
-    <!-- the two different profiles (Volleyball/Chess)  -->
-    <!-- ============================================== -->
+    <!-- About us section -->
     <section class="about tmt py-5">
       <div class="container">
-        <div class="reveal text-center mb-5">
-          <h2 class="about-heading fw-bold">
-            About Us
-            <span class="about-underline"></span>
-          </h2>
-        </div>
+        <h2 class="fw-bold text-center mb-5">About Us</h2>
 
-        <div class="row g-4 justify-content-center about-cards">
-          <div class="col-md-5 reveal reveal-delay-1">
-            <div class="card bcard h-100 border-0 tmt">
-              <div class="bcinn d-flex flex-column h-100  p-4 p-xl-5">
+        <div class="row g-4 justify-content-center">
 
-                <div class="bcvl">VOLLEYBALL</div>
-
-                <div class="bcaw d-flex justify-content-center mb-5 mt-4">
-                  <img class="bca rounded-circle object-fit-cover shadow-sm" src="./assets/volleyball_player.jpg"
-                    width="160" height="160">
-                </div>
-
-                <div class="bci mt-auto text-start">
-                  <h3 class="bcn fw-bold mb-4">Maya Torres</h3>
-
-                  <div class="bcdets d-flex flex-column gap-3">
-                    <div class="bcdr">
-                      <span class="bcdl">QUOTE</span>
-                      <span class="bcds">|</span>
-                      <span class="bcdv fst-italic">"There's nothing like the silence right before a
-                        perfect set turns into a kill."</span>
-                    </div>
-                    <div class="bcdr">
-                      <span class="bcdl">EXPLORE</span>
-                      <span class="bcds">|</span>
-                      <a href="#hobbies" class="flink text-decoration-none fw-bold" data-set-mode="volleyball">
-                        Their World
-                        <svg class="ms-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
+          <div class="col-md-5">
+            <div class="card border-0 shadow-sm p-5 h-100 rounded-4" style="background-color: var(--cardbg);">
+              <div class="bclabel position-absolute text-uppercase fw-bold">VOLLEYBALL</div>
+              <div class="d-flex justify-content-center mb-5 mt-4 ps-4">
+                <img class="rounded-circle object-fit-cover shadow-sm" src="./assets/volleyball_player.jpg" width="160" height="160">
+              </div>
+              <div class="text-start">
+                <h3 class="bcname fw-bold mb-4">Maya Torres</h3>
+                <div class="d-flex flex-column gap-3">
+                  <div class="bcrow d-flex align-items-start">
+                    <span class="bckey fw-bold text-uppercase flex-shrink-0">QUOTE</span>
+                    <span class="bcsep mx-2">|</span>
+                    <span class="fst-italic text-muted" style="line-height: 1.6;">"There's nothing like the silence right before a perfect set turns into a kill."</span>
+                  </div>
+                  <div class="bcrow d-flex align-items-start">
+                    <span class="bckey fw-bold text-uppercase flex-shrink-0">EXPLORE</span>
+                    <span class="bcsep mx-2">|</span>
+                    <a href="#hobbies" class="flink fw-bold p-0" style="color: var(--primary);" data-set-mode="volleyball">Their World</a>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
 
-          <div class="col-md-5 reveal reveal-delay-2">
-            <div class="card bcard h-100 border-0 tmt">
-              <div class="bcinn d-flex flex-column h-100  p-4 p-xl-5">
-
-                <div class="bcvl">CHESS</div>
-
-                <div class="bcaw d-flex justify-content-center mb-5 mt-4">
-                  <img class="bca rounded-circle object-fit-cover shadow-sm" src="./assets/chess_player.jpg" width="160"
-                    height="160">
-                </div>
-
-                <div class="bci mt-auto text-start">
-                  <h3 class="bcn fw-bold mb-4">Daniel Cho</h3>
-
-                  <div class="bcdets d-flex flex-column gap-3">
-                    <div class="bcdr">
-                      <span class="bcdl">QUOTE</span>
-                      <span class="bcds">|</span>
-                      <span class="bcdv fst-italic">"Every game is a conversation. The board never lies
-                        about who's listening."</span>
-                    </div>
-                    <div class="bcdr">
-                      <span class="bcdl">EXPLORE</span>
-                      <span class="bcds">|</span>
-                      <a href="#hobbies" class="flink text-decoration-none fw-bold" data-set-mode="chess">
-                        Their World
-                        <svg class="ms-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
+          <div class="col-md-5">
+            <div class="card border-0 shadow-sm p-5 h-100 rounded-4" style="background-color: var(--cardbg);">
+              <div class="bclabel position-absolute text-uppercase fw-bold">CHESS</div>
+              <div class="d-flex justify-content-center mb-5 mt-4 ps-4">
+                <img class="rounded-circle object-fit-cover shadow-sm" src="./assets/chess_player.jpg" width="160" height="160">
+              </div>
+              <div class="text-start">
+                <h3 class="bcname fw-bold mb-4">Daniel Cho</h3>
+                <div class="d-flex flex-column gap-3">
+                  <div class="bcrow d-flex align-items-start">
+                    <span class="bckey fw-bold text-uppercase flex-shrink-0">QUOTE</span>
+                    <span class="bcsep mx-2">|</span>
+                    <span class="fst-italic text-muted" style="line-height: 1.6;">"Every game is a conversation. The board never lies about who's listening."</span>
+                  </div>
+                  <div class="bcrow d-flex align-items-start">
+                    <span class="bckey fw-bold text-uppercase flex-shrink-0">EXPLORE</span>
+                    <span class="bcsep mx-2">|</span>
+                    <a href="#hobbies" class="flink fw-bold p-0" style="color: var(--primary);" data-set-mode="chess">Their World</a>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Hobby Cards -->
+    <!-- Hobby card section -->
     <section class="hobbies tmt py-5">
       <div class="container">
         <div class="reveal text-center mb-5">

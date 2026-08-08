@@ -56,19 +56,6 @@ let ctiles = [
   }
 ];
 
-let navs = {
-  volleyball: [
-    { label: 'Volleyball', href: './about.html#hobbies', active: true },
-    { label: 'Quick Highlights', href: './index.html#highlights', active: false },
-    { label: 'Join Us', href: './join_us.html', active: false }
-  ],
-  chess: [
-    { label: 'Chess', href: './about.html#hobbies', active: true },
-    { label: 'Chess Matches', href: './chess_matches.html', active: false },
-    { label: 'Quick Highlights', href: './index.html#highlights', active: false }
-  ]
-};
-
 let hero = {
   volleyball: {
     eyebrow: 'Volleyball',
@@ -92,12 +79,8 @@ let hero = {
   }
 };
 
-let mode = 'volleyball';
 
-// --- Helpers ---
-function getEl(selector) {
-  return document.querySelector(selector);
-}
+let mode = 'volleyball';
 
 function getModeData() {
   if (mode === 'chess') {
@@ -119,13 +102,6 @@ function getModeData() {
   }
 }
 
-function buildHTML(items, templateFn) {
-  let str = "";
-  for (let i = 0; i < items.length; i++) {
-    str += templateFn(items[i], i);
-  }
-  return str;
-}
 
 // --- Logic ---
 function setMode(nextMode) {
@@ -140,11 +116,11 @@ function toggleMode() {
 }
 
 function updateHeroContent() {
-  let heroEyebrow = getEl('.heye');
-  let sub = getEl('.hsub');
-  let text = getEl('.ctat');
-  let heroBaseImage = getEl('.hbase');
-  let heroRevealImage = getEl('.rimage');
+  let heroEyebrow = document.querySelector('.heye');
+  let sub = document.querySelector('.hsub');
+  let text = document.querySelector('.ctat');
+  let heroBaseImage = document.querySelector('.hbase');
+  let heroRevealImage = document.querySelector('.rimage');
   
   let data = getModeData().hero;
   
@@ -162,12 +138,12 @@ function updateHeroContent() {
 }
 
 function renderHighlights() {
-  let highlightsGrid = getEl('.grid');
+  let highlightsGrid = document.querySelector('.grid');
   if (!highlightsGrid) return;
   
   let data = getModeData();
 
-  highlightsGrid.innerHTML = buildHTML(data.tiles, (tile, i) => {
+  highlightsGrid.innerHTML = data.tiles.map((tile, i) => {
     let delayClass = i === 1 ? ' reveal-delay-1' : (i === 2 ? ' reveal-delay-2' : '');
     
     return `
@@ -193,7 +169,7 @@ function renderHighlights() {
         </div>
       </div>
     `;
-  });
+  }).join('');
 
   // Re-observe newly created elements
   let newReveals = highlightsGrid.querySelectorAll('.reveal');
@@ -203,15 +179,15 @@ function renderHighlights() {
 }
 
 function renderHobbyNav() {
-  let label = getEl('.dtl');
-  let menu = getEl('.dmenu');
+  let label = document.querySelector('.dtl');
+  let menu = document.querySelector('.dmenu');
   let data = getModeData();
 
   if (label) label.textContent = data.navLabel;
 
   if (menu) {
     if (mode === 'chess') {
-      menu.innerHTML = '<li><a class="dropdown-item fw-medium" href="./chess_matches.html">Matches</a></li>';
+      menu.innerHTML = '<li><a class="dropdown-item fw-medium" href="./chess_matches.html">Matches</a></li><li><a class="dropdown-item fw-medium" href="./chess_openings.html">Openings</a></li>';
     } else {
       menu.innerHTML = '<li><span class="dropdown-item text-muted">More coming soon...</span></li>';
     }
@@ -219,35 +195,16 @@ function renderHobbyNav() {
 }
 
 function applyMode() {
-  let main = getEl('main');
-  let html = document.documentElement;
-  
-  if (main) {
-    main.style.transition = 'opacity 0.3s ease-in-out, filter 0.3s ease-in-out';
-    main.style.opacity = '0';
-    main.style.filter = 'blur(10px)';
-    
-    setTimeout(function () {
-      html.setAttribute('data-mode', mode); 
-      updateHeroContent();
-      renderHighlights();
-      renderHobbyNav();
-      
-      main.style.opacity = '1';
-      main.style.filter = 'blur(0)';
-    }, 300);
-  } else {
-    html.setAttribute('data-mode', mode);
-    updateHeroContent();
-    renderHighlights();
-    renderHobbyNav();
-  }
+  document.documentElement.setAttribute('data-mode', mode);
+  updateHeroContent();
+  renderHighlights();
+  renderHobbyNav();
 }
 
 function initSpotlight() {
-  let spot = getEl('.spot');
-  let layer = getEl('.rlayer');
-  let ring = getEl('.ring');
+  let spot = document.querySelector('.spot');
+  let layer = document.querySelector('.rlayer');
+  let ring = document.querySelector('.ring');
   
   if (!spot) return;
 
@@ -295,12 +252,20 @@ function initSpotlight() {
   });
 }
 
+const toggleHTML = `
+  <span class="mti">
+    <svg class="mtiv" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+    <svg class="mtic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg>
+  </span>
+  <span class="mtk"></span>
+`;
+
 function initModeToggles() {
-  let tnav = getEl('.mtn');
-  let tfoot = getEl('.mtf');
+  let tnav = document.querySelector('.mtn');
+  let tfoot = document.querySelector('.mtf');
   
-  if (tnav) tnav.addEventListener('click', toggleMode);
-  if (tfoot) tfoot.addEventListener('click', toggleMode);
+  if (tnav) { tnav.innerHTML = toggleHTML; tnav.addEventListener('click', toggleMode); }
+  if (tfoot) { tfoot.innerHTML = toggleHTML; tfoot.addEventListener('click', toggleMode); }
 
   let btns = document.querySelectorAll('[data-set-mode]');
   for (let i = 0; i < btns.length; i++) {

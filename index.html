@@ -1,313 +1,346 @@
 <!DOCTYPE html>
 <html lang="en" data-mode="volleyball">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Two Minds, Two Passions — Volleyball & Chess</title>
-  <meta name="description" content="One site, two worlds. Switch between Volleyball Mode and Chess Mode to explore the sport of power and the game of kings.">
-  <link rel="icon" href="assets/icon-light-32x32.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" href="assets/icon-dark-32x32.png" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/apple-icon.png">
-  
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Home Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" href="data:,">
 </head>
-<body class="tm-transition">
-  <!-- Navbar -->
-  <header class="navbar navbar-expand-md sticky-top tm-transition custom-navbar" id="navbar">
+
+<body class="tmt">
+  <!-- Navigation Bar -->
+  <header class="navbar navbar-expand-md sticky-top tmt cnav">
     <div class="container">
-      <a href="#home" class="navbar-brand fw-bold">Two Minds</a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a href="#home" class="nav-link active" aria-current="page">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="hobbyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span id="dropdown-trigger-label">Volleyball</span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="hobbyDropdown" id="dropdown-menu">
-              <!-- Dynamically populated by JS -->
-            </ul>
-          </li>
-        </ul>
-        <div class="d-flex align-items-center">
-          <!-- Mode Toggle -->
-          <button type="button" class="mode-toggle mode-toggle--lg ms-md-3" id="mode-toggle-nav" role="switch" aria-checked="false" aria-label="Switch to Chess mode. Currently Volleyball mode">
-            <span class="mode-toggle__icons" aria-hidden="true">
-              <svg class="mode-toggle__icon-volleyball" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-              <svg class="mode-toggle__icon-crown" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg>
-            </span>
-            <span class="mode-toggle__knob" aria-hidden="true">
-              <svg class="mode-toggle__knob-icon mode-toggle__knob-volleyball" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-              <svg class="mode-toggle__knob-icon mode-toggle__knob-crown" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg>
-            </span>
-          </button>
-        </div>
+      <a href="./index.html" class="navbar-brand fw-bold">Two Minds</a>
+      <ul class="navbar-nav ms-auto me-4 gap-3 align-items-center">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle dtl" href="javascript:void(0)" data-bs-toggle="dropdown">Volleyball</a>
+          <ul class="dmenu dropdown-menu">
+            <li><a class="dropdown-item" href="./chess_matches.html">Matches</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <!-- Mode Toggle -->
+        <button type="button" class="mtn mt mtl ms-md-3">
+          <span class="mti">
+            <svg class="mtiv" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+              <path d="M2 12h20" />
+            </svg>
+            <svg class="mtic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
+              <path d="M5 21h14" />
+            </svg>
+          </span>
+          <span class="mtk"></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section id="home" class="hero tm-transition" aria-label="Hero">
+    <!-- ============================================== -->
+    <!-- HERO SECTION                                   -->
+    <!-- The big introductory banner at the top of the  -->
+    <!-- page with the image and main title.            -->
+    <!-- ============================================== -->
+    <section class="hero tmt">
       <div class="container-fluid p-0">
         <div class="row g-0">
           <div class="col-md-6 order-md-2">
-            <div class="hero__image-wrap w-100 h-100" id="hero-spotlight">
-              <img class="hero__base-image img-fluid w-100 h-100 object-fit-cover zoom-bg" id="hero-base-image" src="assets/volleyball-hero.png" alt="A volleyball player leaping to spike the ball over the net">
-              <div class="hero__reveal-layer" id="hero-reveal-layer" aria-hidden="true">
-                <img class="hero__reveal-image img-fluid w-100 h-100 object-fit-cover zoom-bg" id="hero-reveal-image" src="assets/chess-hero.png" alt="A dramatic close-up of an ornate chess knight piece">
-                <span class="hero__spotlight-ring" id="hero-spotlight-ring"></span>
+            <div class="spot hwrap w-100 h-100">
+              <img class="hbase img-fluid w-100 h-100 object-fit-cover" src="./assets/volleyball_hero.png">
+              <div class="rlayer">
+                <img class="rimage img-fluid w-100 h-100 object-fit-cover" src="./assets/chess_hero.png">
+                <span class="ring"></span>
               </div>
-              <div class="hero__gradient" aria-hidden="true"></div>
+              <div class="hgrad"></div>
             </div>
           </div>
           <div class="col-md-6 order-md-1 d-flex align-items-center">
-            <div class="hero__content p-5 w-100">
-              <p class="hero__eyebrow mb-2 text-uppercase fw-bold" id="hero-eyebrow">Volleyball</p>
-              <h1 class="hero__title display-4 fw-bold">Two Minds, Two Passions</h1>
-              <p class="hero__subtitle lead mt-3" id="hero-subtitle">Six players. One court. Discover the sport that blends power, speed, and teamwork.</p>
-              <a href="#hobbies" class="btn btn-primary hero__cta mt-4" id="hero-cta">
-                <span id="hero-cta-text">Explore Volleyball</span>
-                <svg class="ms-2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <div class="hcont p-5 w-100">
+              <p class="heye mb-2 text-uppercase fw-bold">Volleyball</p>
+              <h1 class="htit display-4 fw-bold">Two Minds, Two Passions</h1>
+              <p class="hsub lead mt-3">Six players. One court. Discover the sport that
+                blends power, speed, and teamwork.</p>
+              <a href="./about.html#hobbies" class="cta btn btn-primary mt-4">
+                <span class="ctat">Explore Volleyball</span>
+                <svg class="ms-2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
               </a>
-              <p class="hero__hint mt-3 small text-muted d-flex align-items-center gap-1">
-                Switch modes with the toggle above
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
-              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="about tm-transition py-5" aria-label="About us">
+    <!-- ============================================== -->
+    <!-- ABOUT US SECTION                               -->
+    <!-- The section displaying the business cards for  -->
+    <!-- the two different profiles (Volleyball/Chess)  -->
+    <!-- ============================================== -->
+    <section class="about tmt py-5">
       <div class="container">
         <div class="reveal text-center mb-5">
-          <h2 class="about__heading fw-bold">
+          <h2 class="about-heading fw-bold">
             About Us
-            <span class="about__underline"></span>
+            <span class="about-underline"></span>
           </h2>
         </div>
 
-        <div class="row g-4 justify-content-center about__cards">
-          <div class="col-md-5 reveal reveal--delay-1">
-            <article class="card biz-card h-100 border-0 tm-transition">
-              <div class="biz-card__inner d-flex flex-column h-100 position-relative p-4 p-xl-5">
-                
-                <div class="biz-card__vertical-label">VOLLEYBALL</div>
-                
-                <div class="biz-card__avatar-wrap d-flex justify-content-center mb-5 mt-4">
-                  <img class="biz-card__avatar rounded-circle object-fit-cover shadow-sm" src="assets/volleyball_player.jpg" alt="Portrait of Maya Torres" width="160" height="160">
+        <div class="row g-4 justify-content-center about-cards">
+          <div class="col-md-5 reveal reveal-delay-1">
+            <div class="card bcard h-100 border-0 tmt">
+              <div class="bcinn d-flex flex-column h-100  p-4 p-xl-5">
+
+                <div class="bcvl">VOLLEYBALL</div>
+
+                <div class="bcaw d-flex justify-content-center mb-5 mt-4">
+                  <img class="bca rounded-circle object-fit-cover shadow-sm" src="./assets/volleyball_player.jpg"
+                    width="160" height="160">
                 </div>
-                
-                <div class="biz-card__info mt-auto text-start">
-                  <h3 class="biz-card__name fw-bold mb-4">Maya Torres</h3>
-                  
-                  <div class="biz-card__details d-flex flex-column gap-3">
-                    <div class="biz-card__detail-row">
-                      <span class="biz-card__detail-label">QUOTE</span>
-                      <span class="biz-card__detail-separator">|</span>
-                      <span class="biz-card__detail-value fst-italic">"There's nothing like the silence right before a perfect set turns into a kill."</span>
+
+                <div class="bci mt-auto text-start">
+                  <h3 class="bcn fw-bold mb-4">Maya Torres</h3>
+
+                  <div class="bcdets d-flex flex-column gap-3">
+                    <div class="bcdr">
+                      <span class="bcdl">QUOTE</span>
+                      <span class="bcds">|</span>
+                      <span class="bcdv fst-italic">"There's nothing like the silence right before a
+                        perfect set turns into a kill."</span>
                     </div>
-                    <div class="biz-card__detail-row">
-                      <span class="biz-card__detail-label">EXPLORE</span>
-                      <span class="biz-card__detail-separator">|</span>
-                      <a href="#hobbies" class="biz-card__detail-link text-decoration-none fw-bold" data-set-mode="volleyball">
+                    <div class="bcdr">
+                      <span class="bcdl">EXPLORE</span>
+                      <span class="bcds">|</span>
+                      <a href="#hobbies" class="flink text-decoration-none fw-bold" data-set-mode="volleyball">
                         Their World
-                        <svg class="ms-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        <svg class="ms-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
                       </a>
                     </div>
                   </div>
                 </div>
-                
+
               </div>
-            </article>
+            </div>
           </div>
 
-          <div class="col-md-5 reveal reveal--delay-2">
-            <article class="card biz-card h-100 border-0 tm-transition">
-              <div class="biz-card__inner d-flex flex-column h-100 position-relative p-4 p-xl-5">
-                
-                <div class="biz-card__vertical-label">CHESS</div>
-                
-                <div class="biz-card__avatar-wrap d-flex justify-content-center mb-5 mt-4">
-                  <img class="biz-card__avatar rounded-circle object-fit-cover shadow-sm" src="assets/chess_player.jpg" alt="Portrait of Daniel Cho" width="160" height="160">
+          <div class="col-md-5 reveal reveal-delay-2">
+            <div class="card bcard h-100 border-0 tmt">
+              <div class="bcinn d-flex flex-column h-100  p-4 p-xl-5">
+
+                <div class="bcvl">CHESS</div>
+
+                <div class="bcaw d-flex justify-content-center mb-5 mt-4">
+                  <img class="bca rounded-circle object-fit-cover shadow-sm" src="./assets/chess_player.jpg" width="160"
+                    height="160">
                 </div>
-                
-                <div class="biz-card__info mt-auto text-start">
-                  <h3 class="biz-card__name fw-bold mb-4">Daniel Cho</h3>
-                  
-                  <div class="biz-card__details d-flex flex-column gap-3">
-                    <div class="biz-card__detail-row">
-                      <span class="biz-card__detail-label">QUOTE</span>
-                      <span class="biz-card__detail-separator">|</span>
-                      <span class="biz-card__detail-value fst-italic">"Every game is a conversation. The board never lies about who's listening."</span>
+
+                <div class="bci mt-auto text-start">
+                  <h3 class="bcn fw-bold mb-4">Daniel Cho</h3>
+
+                  <div class="bcdets d-flex flex-column gap-3">
+                    <div class="bcdr">
+                      <span class="bcdl">QUOTE</span>
+                      <span class="bcds">|</span>
+                      <span class="bcdv fst-italic">"Every game is a conversation. The board never lies
+                        about who's listening."</span>
                     </div>
-                    <div class="biz-card__detail-row">
-                      <span class="biz-card__detail-label">EXPLORE</span>
-                      <span class="biz-card__detail-separator">|</span>
-                      <a href="#hobbies" class="biz-card__detail-link text-decoration-none fw-bold" data-set-mode="chess">
+                    <div class="bcdr">
+                      <span class="bcdl">EXPLORE</span>
+                      <span class="bcds">|</span>
+                      <a href="#hobbies" class="flink text-decoration-none fw-bold" data-set-mode="chess">
                         Their World
-                        <svg class="ms-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        <svg class="ms-1" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
                       </a>
                     </div>
                   </div>
                 </div>
-                
+
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Hobby Cards -->
-    <section id="hobbies" class="hobbies tm-transition py-5" aria-label="Explore the world">
+    <section class="hobbies tmt py-5">
       <div class="container">
         <div class="reveal text-center mb-5">
-          <h2 class="hobbies__heading fw-bold">Explore the World</h2>
-          <p class="hobbies__subheading text-muted">Dive deeper into our passions</p>
+          <h2 class="hobbies-heading fw-bold">Explore the World</h2>
+          <p class="hobbies-subheading text-muted">Dive deeper into our passions</p>
         </div>
 
         <div class="row g-4 justify-content-center">
           <div class="col-md-5 reveal">
-            <article class="card hobby-card border-0 h-100 overflow-hidden text-white bg-dark">
-              <img class="card-img object-fit-cover h-100 w-100" src="assets/volleyball-hero.png" alt="Volleyball player spiking the ball">
-              <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, #15324f 0%, #15324ff2 15%, #15324fa6 40%, transparent 70%); pointer-events: none;" aria-hidden="true"></div>
-              
+            <div class="card hcard border-0 h-100 overflow-hidden text-white bg-dark">
+              <img class="card-img object-fit-cover h-100 w-100" src="./assets/volleyball_hero.png">
+              <div class="position-absolute top-0 start-0 w-100 h-100"
+                style="background: linear-gradient(to top, #15324f 0%, #15324ff2 15%, #15324fa6 40%, #00000000 70%); pointer-events: none;">
+              </div>
+
               <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-xl-5">
                 <h3 class="card-title fw-bold">Volleyball</h3>
-                <p class="card-text mb-4" style="color: #9db6cf;">Fast rallies, explosive jumps, and split-second teamwork. Volleyball is a sport where every point is earned together.</p>
+                <p class="card-text mb-4" style="color: #9db6cf;">Fast rallies, explosive jumps, and split-second
+                  teamwork. Volleyball is a sport where every point is earned together.</p>
                 <div class="d-flex gap-2 mb-4 flex-wrap">
                   <span class="badge rounded-pill py-2 px-3" style="background-color: #2a4f72;">
-                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                      <path d="M4 22h16" />
+                      <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                      <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                      <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                    </svg>
                     Team Sport
                   </span>
                   <span class="badge rounded-pill py-2 px-3" style="background-color: #2a4f72;">
-                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                      <path d="M5 3v4" />
+                      <path d="M19 17v4" />
+                      <path d="M3 5h4" />
+                      <path d="M17 19h4" />
+                    </svg>
                     High Energy
                   </span>
                 </div>
-                <button type="button" class="btn btn-outline-light mt-2 fw-bold d-flex align-items-center justify-content-center" data-set-mode="volleyball">
+                <button type="button"
+                  class="btn btn-outline-light mt-2 fw-bold d-flex align-items-center justify-content-center"
+                  data-set-mode="volleyball">
                   Enter this World
-                  <svg class="ms-2" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  <svg class="ms-2" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
                 </button>
               </div>
-            </article>
+            </div>
           </div>
 
           <div class="col-md-2 d-flex align-items-center justify-content-center py-3">
             <span class="text-muted text-uppercase fw-bold">or</span>
           </div>
 
-          <div class="col-md-5 reveal reveal--delay-1">
-            <article class="card hobby-card border-0 h-100 overflow-hidden text-white bg-dark">
-              <img class="card-img object-fit-cover h-100 w-100" src="assets/chess-hero.png" alt="Close-up of a chess knight piece">
-              <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, #2b2415 0%, #2b2415f2 15%, #2b2415a6 40%, transparent 70%); pointer-events: none;" aria-hidden="true"></div>
-              
+          <div class="col-md-5 reveal reveal-delay-1">
+            <div class="card hcard border-0 h-100 overflow-hidden text-white bg-dark">
+              <img class="card-img object-fit-cover h-100 w-100" src="./assets/chess_hero.png">
+              <div class="position-absolute top-0 start-0 w-100 h-100"
+                style="background: linear-gradient(to top, #2b2415 0%, #2b2415f2 15%, #2b2415a6 40%, #00000000 70%); pointer-events: none;">
+              </div>
+
               <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-xl-5">
                 <h3 class="card-title fw-bold">Chess</h3>
-                <p class="card-text mb-4" style="color: #bbab86;">A battle of foresight and patience across sixty-four squares. In chess, the quietest move can decide everything.</p>
+                <p class="card-text mb-4" style="color: #bbab86;">A battle of foresight and patience across sixty-four
+                  squares. In chess, the quietest move can decide everything.</p>
                 <div class="d-flex gap-2 mb-4 flex-wrap">
                   <span class="badge rounded-pill py-2 px-3" style="background-color: #4a3f24;">
-                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                      <path d="M4 22h16" />
+                      <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                      <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                      <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                    </svg>
                     Strategy
                   </span>
                   <span class="badge rounded-pill py-2 px-3" style="background-color: #4a3f24;">
-                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                      <path d="M5 3v4" />
+                      <path d="M19 17v4" />
+                      <path d="M3 5h4" />
+                      <path d="M17 19h4" />
+                    </svg>
                     Patience
                   </span>
                 </div>
-                <button type="button" class="btn btn-outline-light mt-2 fw-bold d-flex align-items-center justify-content-center" data-set-mode="chess">
+                <button type="button"
+                  class="btn btn-outline-light mt-2 fw-bold d-flex align-items-center justify-content-center"
+                  data-set-mode="chess">
                   Enter this World
-                  <svg class="ms-2" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  <svg class="ms-2" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
                 </button>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Highlights -->
-    <section class="highlights tm-transition py-5" id="highlights" aria-label="Quick highlights">
+    <!-- Save the current mode state -->
+    <section class="highlights tmt py-5">
       <div class="container">
-        <div class="row g-4 highlights__grid justify-content-center" id="highlights-grid"></div>
+        <div class="row g-4 grid justify-content-center"></div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="footer tm-transition pt-5 pb-4 text-center text-md-start">
-    <div class="container">
-      <div class="row g-5 mb-5">
-        <!-- Left Column: Brand, Mission & Social/Widgets -->
-        <div class="col-md-7 col-lg-6">
-          <h3 class="footer__brand fw-bold mb-4 fs-2">Two Minds Two Passions</h3>
-          <p class="footer__tagline mb-4 pe-md-5" style="max-width: 450px;">
-            One site, two worlds. Switch between Volleyball Mode and Chess Mode to explore the sport of power and the game of kings.
-          </p>
-          <div class="footer__toggle mt-4 d-flex align-items-center justify-content-center justify-content-md-start gap-3">
-            <span class="small text-muted">Theme:</span>
-            <button type="button" class="mode-toggle mode-toggle--sm" id="mode-toggle-footer" role="switch" aria-checked="false" aria-label="Switch to Chess mode. Currently Volleyball mode">
-              <span class="mode-toggle__icons" aria-hidden="true">
-                <svg class="mode-toggle__icon-volleyball" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                <svg class="mode-toggle__icon-crown" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg>
-              </span>
-              <span class="mode-toggle__knob" aria-hidden="true">
-                <svg class="mode-toggle__knob-icon mode-toggle__knob-volleyball" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                <svg class="mode-toggle__knob-icon mode-toggle__knob-crown" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg>
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Right Column: Navigation -->
-        <div class="col-md-5 col-lg-6 d-flex justify-content-center justify-content-md-end">
-          <nav class="footer__nav d-flex flex-column gap-3 text-start mt-2" aria-label="Footer" style="min-width: 150px;">
-            <a href="#home" class="footer__link text-decoration-none fs-4 position-relative">
-              <span class="position-absolute translate-middle-y" style="left: -1rem; top: 50%; color: var(--primary-brand-color); font-size: 1.25rem;">•</span>
-              Home
-            </a>
-            <a href="#about" class="footer__link text-decoration-none fs-4 ps-2">About</a>
-            <a href="#hobbies" class="footer__link text-decoration-none fs-4 ps-2" data-set-mode="volleyball">Volleyball</a>
-            <a href="#hobbies" class="footer__link text-decoration-none fs-4 ps-2" data-set-mode="chess">Chess</a>
-            <a href="join-us.html" class="footer__link text-decoration-none fs-4 ps-2">Join Us</a>
-          </nav>
-        </div>
+  <footer class="footer tmt pt-5 pb-4">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <h3 class="fw-bold fs-2">Two Minds Two Passions</h3>
+        <p class="ftag mb-4 pe-md-5" style="max-width: 450px;">
+          One site, two worlds. Switch between Volleyball Mode and Chess Mode to explore the sport of power and the game
+          of kings.
+        </p>
       </div>
-      
-      <hr class="border-secondary opacity-25">
-
-      <div class="row pt-3 align-items-center">
-        <div class="col-md-6 text-center text-md-start">
-          <p class="footer__copyright small text-muted mb-0" id="footer-copyright"></p>
-        </div>
-        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-          <a href="#" class="footer__legal-link text-decoration-none small text-muted me-4 hover-text-primary">Privacy Policy</a>
-          <a href="#" class="footer__legal-link text-decoration-none small text-muted hover-text-primary">Terms & Conditions</a>
-        </div>
-      </div>
+      <nav class="d-flex flex-column gap-3">
+        <a href="./index.html" class="flink position-relative">
+          <span class="position-absolute translate-middle-y"
+            style="left: -16px; top: 50%; color: var(--primary); font-size: 20px;">•</span>
+          Home
+        </a>
+        <a href="./about.html" class="flink">About</a>
+        <a href="./index.html#hobbies" class="flink" data-set-mode="volleyball">Volleyball</a>
+        <a href="./index.html#hobbies" class="flink" data-set-mode="chess">Chess</a>
+        <a href="./join_us.html" class="flink">Join Us</a>
+      </nav>
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <!-- Custom JS -->
-  <script src="js/main.js"></script>
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
+
 </html>

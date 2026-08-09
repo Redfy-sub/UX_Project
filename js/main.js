@@ -45,7 +45,7 @@ let ctiles = [
     teaser: "Hover to grasp the sheer scale",
     factLabel: "The Numbers",
     factTitle: "More Than the Stars",
-    fact: "There are more possible chess games than atoms in the observable universe — the Shannon number estimates around 10^120 distinct games.",
+    fact: "There are more possible chess games than atoms in the observable universe, the Shannon number estimates around 10^120 distinct games.",
   },
   {
     icon: "<i class=\"bi bi-clock fs-1 mb-3 d-inline-block\"></i>",

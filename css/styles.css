@@ -1,10 +1,10 @@
-/* ===== Design System: Material Design 3 Color Roles & Custom Properties ===== */
+/* Jian Yew style sheet */
 :root {
-  /* Volleyball Mode (Light) */
-  --primary: #1e6fbf; /* Blue */
-  --accent: #f5c518; /* Yellow */
+  /* Light mode color */
+  --primary: #1e6fbf;
+  --accent: #f5c518;
   --surface: #ffffff;
-  --surfacealt: #f8f9fa; /* Light Gray */
+  --surfacealt: #f8f9fa;
   --text: #1c1c1e;
   --textalt: #6c757d;
   --cardbg: #ffffff;
@@ -14,9 +14,9 @@
 }
 
 [data-mode="chess"] {
-  /* Chess Mode (Dark) */
-  --primary: #d4a017; /* Gold */
-  --accent: #ede8d0; /* Ivory */
+  /* Dark mode color */
+  --primary: #d4a017;
+  --accent: #ede8d0;
   --surface: #121212;
   --surfacealt: #161616;
   --text: #f2f2f2;
@@ -27,17 +27,14 @@
   --footertext: var(--textalt);
 }
 
-/* ===== Reset & Base (Apple HIG Typography) ===== */
+/* Global style */
 html {
   scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
 }
 
 body {
   background-color: var(--surface);
   color: var(--text);
-  line-height: 1.5;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -46,19 +43,18 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
   color: var(--text);
 }
 
 a {
-  text-decoration: none;
   color: var(--primary);
 }
+
 a:hover {
   color: var(--accent);
 }
 
-/* ===== Global Transitions ===== */
+/* Mode change animation */
 .tmt,
 .tmt * {
   transition-property: background-color, color, border-color, box-shadow, fill, stroke, transform, opacity;
@@ -66,19 +62,18 @@ a:hover {
   transition-timing-function: ease-in-out;
 }
 
-/* ===== Navbar (Bootstrap Overrides) ===== */
+/* Overrides navbar style from bootstrap */
 .cnav {
   background-color: var(--surface);
   border-bottom: 2px solid var(--primary);
   box-shadow: 0 1px 2px #0000000D;
+  z-index: 1030;
 }
 
 .cnav .nav-link {
   color: var(--text);
   position: relative;
 }
-
-/* Nav Link Underline Animation */
 
 .cnav .nav-link.active {
   color: var(--primary);
@@ -97,13 +92,8 @@ a:hover {
   color: var(--primary);
 }
 
-/* Navbar Toggle icon color fix for dark mode */
-[data-mode="chess"] .navbar-toggler-icon {
-  filter: invert(1);
-}
 
-
-/* Dropdown Menu overrides */
+/* Dropdown */
 .dropdown-menu {
   background-color: var(--surface);
   border: 1px solid var(--border);
@@ -120,43 +110,44 @@ a:hover {
   visibility: visible;
   transform: translateY(0);
 }
+
 .dropdown-item {
   color: var(--text);
   transition: background-color 0.2s, color 0.2s;
 }
+
 .dropdown-item:hover,
 .dropdown-item:focus {
   background-color: var(--surfacealt);
   color: var(--primary);
 }
+
 .dropdown-item.active,
 .dropdown-item:active {
   background-color: var(--primary);
   color: var(--surface);
 }
 
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-  }
-}
 
-/* ===== Hero Spotlight Component ===== */
+
+/* Hero section style */
 .hero {
   background-color: var(--surfacealt);
 }
+
 .hwrap {
   position: relative;
   overflow: hidden;
   min-height: 400px;
 }
+
 .hbase,
 .rimage {
   position: absolute;
   inset: 0;
   object-fit: cover;
 }
+
 .rlayer {
   pointer-events: none;
   position: absolute;
@@ -164,44 +155,51 @@ a:hover {
   opacity: 0;
   transition: opacity 0.3s ease-out;
 }
+
 .rlayer.is-active {
   opacity: 1;
 }
+
 .hgrad {
   pointer-events: none;
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, #00000066, #00000000, #00000000);
 }
+
 .heye {
   letter-spacing: 3.2px;
   color: var(--primary);
 }
+
 .htit {
   text-wrap: balance;
 }
+
 .hsub {
   text-wrap: pretty;
   color: var(--textalt);
 }
+
 .cta {
   background-color: var(--primary);
   border-color: var(--primary);
   color: var(--surface);
 }
+
 .cta:hover {
   background-color: var(--accent);
   border-color: var(--accent);
-  color: #1c1c1e; /* Hardcoded dark text for excellent contrast against light hover backgrounds */
+  color: #1c1c1e;
 }
 
-/* ===== Card Overrides ===== */
+/* Shape style for cards */
 .hcard {
   border-radius: 28px !important;
   min-height: 420px;
 }
 
-/* About Us card utility classes */
+/* Profile card style */
 .bclabel {
   color: var(--primary);
   top: 48px;
@@ -211,43 +209,48 @@ a:hover {
   letter-spacing: 4.8px;
   font-size: 13.6px;
 }
+
 .bcname {
   font-size: 35.2px;
   letter-spacing: -0.48px;
 }
+
 .bcrow {
   font-size: 15.2px;
 }
+
 .bckey {
   color: var(--primary);
   width: 80px;
   letter-spacing: 0.8px;
   margin-top: 2.4px;
 }
+
 .bcsep {
   color: var(--border);
   margin-top: 2.4px;
 }
 
-/* ===== Flip Cards (Highlights) ===== */
+/* Flip card for the home page */
 .highlights-tile {
   height: 380px;
-}
-.tmp {
   perspective: 800px;
 }
+
 .tf {
   transform-style: preserve-3d;
   transition: transform 0.5s ease-in-out;
   position: relative;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
-.tft:hover .tf,
-.tft:focus-visible .tf,
-.tft.isf .tf {
+
+.tf:hover,
+.tf:focus-visible {
   transform: rotateY(180deg);
 }
+
 .tff {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -259,34 +262,34 @@ a:hover {
   border-radius: 24px;
   text-align: center;
 }
+
 .tfb {
   transform: rotateY(180deg);
 }
+
 .highlights {
   background-color: var(--surfacealt);
 }
-.htrig {
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  text-align: left;
-  border: none;
-  background: none;
-  padding: 0;
-}
-.hfront, .hback {
+
+
+
+.hfront,
+.hback {
   flex-direction: column;
   padding: 36px;
   box-shadow: 0 20px 60px #00000059;
   background-color: var(--cardbg);
 }
+
 .hfglare {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, #FFFFFF59 0%, #FFFFFF00 50%);
   pointer-events: none;
 }
-.tff, .htrig, .hfglare {
+
+.tff,
+.hfglare {
   border-radius: 24px;
 }
 
@@ -301,16 +304,19 @@ a:hover {
   background: var(--primary);
   box-shadow: 0 8px 32px #00000040;
 }
-.hiwrap svg {
-  height: 44px;
-  width: 44px;
+
+.hiwrap i {
   color: var(--surface);
 }
-.hctit, .hbtit {
+
+.hctit,
+.hbtit {
   font-weight: 700;
   margin-bottom: 12px;
 }
-.hchin, .hblab {
+
+.hchin,
+.hblab {
   margin-top: auto;
   font-size: 11px;
   font-weight: 600;
@@ -319,7 +325,7 @@ a:hover {
   color: var(--textalt);
 }
 
-/* ===== Footer ===== */
+/* Footer */
 .footer {
   position: relative;
   overflow: hidden;
@@ -328,6 +334,7 @@ a:hover {
   color: var(--footertext);
   z-index: 1;
 }
+
 .footer::before,
 .footer::after {
   content: "";
@@ -338,29 +345,31 @@ a:hover {
   z-index: -1;
   pointer-events: none;
 }
+
 .footer::before {
   width: 400px;
   height: 400px;
   top: -100px;
   right: 10%;
 }
+
 .footer::after {
   width: 300px;
   height: 300px;
   bottom: -50px;
   right: -50px;
 }
-.ftag {
-  line-height: 1.6;
-}
+
+
 .flink {
   color: var(--text);
   transition: color 0.3s ease;
   text-decoration: none;
-  font-size: 1.5rem; /* Equivalent to fs-4 */
-  padding-left: 0.5rem; /* Equivalent to ps-2 */
+  font-size: 24px;
+  padding-left: 8px;
 }
-/* ===== Mode Toggle (Existing Logic) ===== */
+
+/* Toggle switch style */
 .btn {
   border-radius: 9999px;
   padding: 12px 32px;
@@ -387,16 +396,25 @@ a:hover {
   background: #e4eaf1;
   border: none;
 }
+
 [data-mode="chess"] .mt {
   background: #2a2310;
 }
+
 .mt:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--primary);
 }
-.mtl { height: 32px; width: 72px; }
-.mtl .mtk { height: 24px; width: 24px; }
 
+.mtl {
+  height: 32px;
+  width: 72px;
+}
+
+.mtl .mtk {
+  height: 24px;
+  width: 24px;
+}
 
 .mti {
   pointer-events: none;
@@ -407,10 +425,22 @@ a:hover {
   justify-content: space-between;
   padding: 0 6px;
 }
-.mtiv { color: #1e6fbf; }
-[data-mode="chess"] .mtiv { color: #6c757d; }
-.mtic { color: #a0a8b0; }
-[data-mode="chess"] .mtic { color: #d4a017; }
+
+.mtiv {
+  color: #1e6fbf;
+}
+
+[data-mode="chess"] .mtiv {
+  color: #6c757d;
+}
+
+.mtic {
+  color: #a0a8b0;
+}
+
+[data-mode="chess"] .mtic {
+  color: #d4a017;
+}
 
 .mtk {
   position: relative;
@@ -424,47 +454,39 @@ a:hover {
   transition: transform 0.3s ease-in-out;
   transform: translateX(0);
 }
+
 [data-mode="chess"] .mtk {
   background: #d4a017;
 }
-[data-mode="chess"] .mtl .mtk { transform: translateX(40px); }
 
+[data-mode="chess"] .mtl .mtk {
+  transform: translateX(40px);
+}
 
-
-/* ===== Reveal Animations ===== */
+/* Reveal animation when scrolling */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.reveal-delay-1 { transition-delay: 0.2s; }
-.reveal-delay-2 { transition-delay: 0.4s; }
 
-/* Specific styling from join_us.html following design system guidelines */
+.reveal-delay-1 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.4s;
+}
+
+/* Form style for the join us page */
 .jhero {
   background: linear-gradient(135deg, var(--surface) 0%, var(--surfacealt) 100%);
   padding: 96px 0 48px;
-  border-bottom: 1px solid var(--border);
-}
-
-.fcard {
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  box-shadow: 0 12px 32px #0000000D;
-  background-color: var(--surface);
-  overflow: hidden;
-}
-
-
-
-.form-label {
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 8px;
 }
 
 .form-control {
@@ -475,6 +497,7 @@ a:hover {
   padding: 12px 16px;
   transition: all 0.2s ease;
 }
+.form-control::placeholder { color: var(--textalt); }
 
 .form-control:focus {
   background-color: var(--surface);
@@ -490,9 +513,3 @@ a:hover {
   background-color: var(--primary);
   border-color: var(--primary);
 }
-
-.invalid-feedback {
-  font-size: 14px;
-  margin-top: 8px;
-}
-

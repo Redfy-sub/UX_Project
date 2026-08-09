@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <title>Home Page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="icon" href="data:,">
 </head>
 
-<body class="tmt">
-  <!-- Navigation Bar -->
-  <header class="navbar navbar-expand-md sticky-top tmt cnav">
+<body class="tmt d-flex flex-column min-vh-100">
+  <!-- Navigation bar -->
+  <header class="navbar navbar-expand sticky-top tmt cnav">
     <div class="container">
       <a href="./index.html" class="navbar-brand fw-bold">Two Minds</a>
       <ul class="navbar-nav ms-auto me-4 gap-3 align-items-center">
@@ -29,29 +30,25 @@
           </ul>
         </li>
       </ul>
-      <div class="d-flex align-items-center">
-        <!-- Mode Toggle -->
-        <button type="button" class="mtn mt mtl ms-md-3"></button>
-      </div>
+      <!-- Toggle switch -->
+      <button type="button" class="mtn mt mtl ms-3"></button>
     </div>
   </header>
 
   <main>
-    <!-- Hero section, image reveal different mode image as preview -->
+    <!-- Hero section, image reveal different mode's image as preview -->
     <section class="hero tmt">
       <div class="container-fluid p-0">
         <div class="row g-0">
-          <div class="col-md-6 order-md-2">
-            <div class="spot hwrap w-100 h-100">
-              <img class="hbase img-fluid w-100 h-100 object-fit-cover" src="./assets/volleyball_hero.png">
+          <div class="col-6 spot hwrap">
+              <img class="hbase img-fluid w-100 h-100 object-fit-cover" src="./assets/piano_hero.jpg">
               <div class="rlayer">
-                <img class="rimage img-fluid w-100 h-100 object-fit-cover" src="./assets/chess_hero.png">
+                <img class="rimage img-fluid w-100 h-100 object-fit-cover" src="./assets/chess_hero.jpg">
                 <span class="ring"></span>
               </div>
               <div class="hgrad"></div>
-            </div>
           </div>
-          <div class="col-md-6 order-md-1 d-flex align-items-center">
+          <div class="col-6 d-flex align-items-center">
             <div class="hcont p-5 w-100">
               <p class="heye mb-2 text-uppercase fw-bold">Volleyball</p>
               <h1 class="htit display-4 fw-bold">Two Minds, Two Passions</h1>
@@ -59,11 +56,6 @@
                 blends power, speed, and teamwork.</p>
               <a href="./about.html#hobbies" class="cta btn btn-primary mt-4">
                 <span class="ctat">Explore Volleyball</span>
-                <svg class="ms-2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
               </a>
             </div>
           </div>
@@ -72,56 +64,50 @@
     </section>
 
     <!-- About us section -->
-    <section class="about tmt py-5">
+    <section class="tmt py-5">
       <div class="container">
         <h2 class="fw-bold text-center mb-5">About Us</h2>
 
         <div class="row g-4 justify-content-center">
 
-          <div class="col-md-5">
+          <div class="col-5">
             <div class="card border-0 shadow-sm p-5 h-100 rounded-4" style="background-color: var(--cardbg);">
               <div class="bclabel position-absolute text-uppercase fw-bold">VOLLEYBALL</div>
               <div class="d-flex justify-content-center mb-5 mt-4 ps-4">
-                <img class="rounded-circle object-fit-cover shadow-sm" src="./assets/volleyball_player.jpg" width="160" height="160">
+                <img class="rounded-circle object-fit-cover shadow-sm" src="./assets/volleyball_player.jpg" width="160"
+                  height="160">
               </div>
-              <div class="text-start">
-                <h3 class="bcname fw-bold mb-4">Maya Torres</h3>
-                <div class="d-flex flex-column gap-3">
-                  <div class="bcrow d-flex align-items-start">
-                    <span class="bckey fw-bold text-uppercase flex-shrink-0">QUOTE</span>
-                    <span class="bcsep mx-2">|</span>
-                    <span class="fst-italic text-muted" style="line-height: 1.6;">"There's nothing like the silence right before a perfect set turns into a kill."</span>
-                  </div>
-                  <div class="bcrow d-flex align-items-start">
-                    <span class="bckey fw-bold text-uppercase flex-shrink-0">EXPLORE</span>
-                    <span class="bcsep mx-2">|</span>
-                    <a href="#hobbies" class="flink fw-bold p-0" style="color: var(--primary);" data-set-mode="volleyball">Their World</a>
-                  </div>
-                </div>
+              <h3 class="bcname fw-bold mb-4">Maya Torres</h3>
+              <div class="bcrow d-flex align-items-start mb-3">
+                <span class="bckey fw-bold text-uppercase flex-shrink-0">QUOTE</span>
+                <span class="bcsep mx-2">|</span>
+                <span class="fst-italic text-muted">"There's nothing like the silence right before a perfect set turns into a kill."</span>
+              </div>
+              <div class="bcrow d-flex align-items-start">
+                <span class="bckey fw-bold text-uppercase flex-shrink-0">EXPLORE</span>
+                <span class="bcsep mx-2">|</span>
+                <a href="#hobbies" class="fw-bold p-0" style="color: var(--primary);" data-set-mode="volleyball">Their World</a>
               </div>
             </div>
           </div>
 
-          <div class="col-md-5">
+          <div class="col-5">
             <div class="card border-0 shadow-sm p-5 h-100 rounded-4" style="background-color: var(--cardbg);">
               <div class="bclabel position-absolute text-uppercase fw-bold">CHESS</div>
               <div class="d-flex justify-content-center mb-5 mt-4 ps-4">
-                <img class="rounded-circle object-fit-cover shadow-sm" src="./assets/chess_player.jpg" width="160" height="160">
+                <img class="rounded-circle object-fit-cover shadow-sm" src="./assets/chess_player.jpg" width="160"
+                  height="160">
               </div>
-              <div class="text-start">
-                <h3 class="bcname fw-bold mb-4">Daniel Cho</h3>
-                <div class="d-flex flex-column gap-3">
-                  <div class="bcrow d-flex align-items-start">
-                    <span class="bckey fw-bold text-uppercase flex-shrink-0">QUOTE</span>
-                    <span class="bcsep mx-2">|</span>
-                    <span class="fst-italic text-muted" style="line-height: 1.6;">"Every game is a conversation. The board never lies about who's listening."</span>
-                  </div>
-                  <div class="bcrow d-flex align-items-start">
-                    <span class="bckey fw-bold text-uppercase flex-shrink-0">EXPLORE</span>
-                    <span class="bcsep mx-2">|</span>
-                    <a href="#hobbies" class="flink fw-bold p-0" style="color: var(--primary);" data-set-mode="chess">Their World</a>
-                  </div>
-                </div>
+              <h3 class="bcname fw-bold mb-4">Lim Jian Yew</h3>
+              <div class="bcrow d-flex align-items-start mb-3">
+                <span class="bckey fw-bold text-uppercase flex-shrink-0">QUOTE</span>
+                <span class="bcsep mx-2">|</span>
+                <span class="fst-italic text-muted">"A king waits to be protected. A pawn fights its way to become one."</span>
+              </div>
+              <div class="bcrow d-flex align-items-start">
+                <span class="bckey fw-bold text-uppercase flex-shrink-0">EXPLORE</span>
+                <span class="bcsep mx-2">|</span>
+                <a href="#hobbies" class="fw-bold p-0" style="color: var(--primary);" data-set-mode="chess">Their World</a>
               </div>
             </div>
           </div>
@@ -131,115 +117,59 @@
     </section>
 
     <!-- Hobby card section -->
-    <section class="hobbies tmt py-5">
+    <section id="hobbies" class="tmt py-5">
       <div class="container">
         <div class="reveal text-center mb-5">
-          <h2 class="hobbies-heading fw-bold">Explore the World</h2>
-          <p class="hobbies-subheading text-muted">Dive deeper into our passions</p>
+          <h2 class="fw-bold">Explore the World</h2>
+          <p class="text-muted">Dive deeper into our passions</p>
         </div>
 
         <div class="row g-4 justify-content-center">
-          <div class="col-md-5 reveal">
+          <div class="col-5 reveal">
             <div class="card hcard border-0 h-100 overflow-hidden text-white bg-dark">
               <img class="card-img object-fit-cover h-100 w-100" src="./assets/volleyball_hero.png">
-              <div class="position-absolute top-0 start-0 w-100 h-100"
-                style="background: linear-gradient(to top, #15324f 0%, #15324ff2 15%, #15324fa6 40%, #00000000 70%); pointer-events: none;">
-              </div>
-
-              <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-xl-5">
+              <div class="card-img-overlay d-flex flex-column justify-content-end p-5"
+                style="background: linear-gradient(to top, #15324f 0%, #15324ff2 15%, #15324fa6 40%, #00000000 70%);">
                 <h3 class="card-title fw-bold">Volleyball</h3>
                 <p class="card-text mb-4" style="color: #9db6cf;">Fast rallies, explosive jumps, and split-second
                   teamwork. Volleyball is a sport where every point is earned together.</p>
                 <div class="d-flex gap-2 mb-4 flex-wrap">
                   <span class="badge rounded-pill py-2 px-3" style="background-color: #2a4f72;">
-                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                      <path d="M4 22h16" />
-                      <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-                      <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-                      <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-                    </svg>
                     Team Sport
                   </span>
                   <span class="badge rounded-pill py-2 px-3" style="background-color: #2a4f72;">
-                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path
-                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
-                      <path d="M5 3v4" />
-                      <path d="M19 17v4" />
-                      <path d="M3 5h4" />
-                      <path d="M17 19h4" />
-                    </svg>
                     High Energy
                   </span>
                 </div>
-                <button type="button"
-                  class="btn btn-outline-light mt-2 fw-bold d-flex align-items-center justify-content-center"
-                  data-set-mode="volleyball">
+                <button type="button" class="btn btn-outline-light mt-2 fw-bold w-100" data-set-mode="volleyball">
                   Enter this World
-                  <svg class="ms-2" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
                 </button>
               </div>
             </div>
           </div>
 
-          <div class="col-md-2 d-flex align-items-center justify-content-center py-3">
-            <span class="text-muted text-uppercase fw-bold">or</span>
+          <div class="col-2 d-flex align-items-center justify-content-center py-3 text-muted text-uppercase fw-bold">
+            or
           </div>
 
-          <div class="col-md-5 reveal reveal-delay-1">
+          <div class="col-5 reveal reveal-delay-1">
             <div class="card hcard border-0 h-100 overflow-hidden text-white bg-dark">
-              <img class="card-img object-fit-cover h-100 w-100" src="./assets/chess_hero.png">
-              <div class="position-absolute top-0 start-0 w-100 h-100"
-                style="background: linear-gradient(to top, #2b2415 0%, #2b2415f2 15%, #2b2415a6 40%, #00000000 70%); pointer-events: none;">
-              </div>
-
-              <div class="card-img-overlay d-flex flex-column justify-content-end p-4 p-xl-5">
+              <img class="card-img object-fit-cover h-100 w-100" src="./assets/explore_chess.jpg">
+              <div class="card-img-overlay d-flex flex-column justify-content-end p-5"
+                style="background: linear-gradient(to top, #2b2415 0%, #2b2415f2 15%, #2b2415a6 40%, #00000000 70%);">
                 <h3 class="card-title fw-bold">Chess</h3>
                 <p class="card-text mb-4" style="color: #bbab86;">A battle of foresight and patience across sixty-four
                   squares. In chess, the quietest move can decide everything.</p>
                 <div class="d-flex gap-2 mb-4 flex-wrap">
                   <span class="badge rounded-pill py-2 px-3" style="background-color: #4a3f24;">
-                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                      <path d="M4 22h16" />
-                      <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-                      <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-                      <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-                    </svg>
                     Strategy
                   </span>
                   <span class="badge rounded-pill py-2 px-3" style="background-color: #4a3f24;">
-                    <svg class="me-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path
-                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
-                      <path d="M5 3v4" />
-                      <path d="M19 17v4" />
-                      <path d="M3 5h4" />
-                      <path d="M17 19h4" />
-                    </svg>
                     Patience
                   </span>
                 </div>
-                <button type="button"
-                  class="btn btn-outline-light mt-2 fw-bold d-flex align-items-center justify-content-center"
-                  data-set-mode="chess">
+                <button type="button" class="btn btn-outline-light mt-2 fw-bold w-100" data-set-mode="chess">
                   Enter this World
-                  <svg class="ms-2" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
                 </button>
               </div>
             </div>
@@ -248,7 +178,7 @@
       </div>
     </section>
 
-    <!-- Save the current mode state -->
+    <!-- Card flip section -->
     <section class="highlights tmt py-5">
       <div class="container">
         <div class="row g-4 grid justify-content-center"></div>
@@ -257,11 +187,11 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer tmt pt-5 pb-4">
+  <footer class="footer tmt mt-auto pt-5 pb-4">
     <div class="container d-flex justify-content-between">
       <div>
         <h3 class="fw-bold fs-2">Two Minds Two Passions</h3>
-        <p class="ftag mb-4 pe-md-5" style="max-width: 450px;">
+        <p class="mb-4 pe-5" style="max-width: 450px;">
           One site, two worlds. Switch between Volleyball Mode and Chess Mode to explore the sport of power and the game
           of kings.
         </p>

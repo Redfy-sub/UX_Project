@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-mode="volleyball">
-
+<!-- Jian Yew -->
 <head>
   <meta charset="UTF-8">
   <title>Join Us Page</title>
@@ -46,20 +46,20 @@
     <section class="py-5 tmt">
       <div class="container">
         <div class="card border rounded-4 shadow-sm overflow-hidden col-8 mx-auto p-5" style="background-color: var(--surface); color: var(--text);">
-          <form>
+          <form action="response.html" method="GET">
             <div class="mb-4">
               <label class="form-label">Full Name</label>
-              <input type="text" class="form-control" placeholder="e.g. James Bond" required>
+              <input type="text" name="name" class="form-control" placeholder="e.g. James Bond" required>
               <div class="invalid-feedback">Please enter your full name.</div>
             </div>
 
             <div class="mb-4">
               <label class="form-label">Email Address</label>
-              <input type="email" class="form-control" placeholder="james_bond@gmail.com" required>
+              <input type="email" name="email" class="form-control" placeholder="james_bond@gmail.com" required>
               <div class="invalid-feedback">Please provide a valid email address.</div>
             </div>
 
-            <fieldset class="mb-5">
+            <fieldset class="mb-4">
               <legend class="form-label">Experience Level</legend>
               <div class="d-flex flex-column gap-2 mt-2">
                 <label class="form-check-label text-muted">
@@ -76,6 +76,20 @@
                 </label>
               </div>
               <div class="invalid-feedback">Please select your experience level.</div>
+            </fieldset>
+
+            <fieldset class="mb-5">
+              <legend class="form-label">Interests</legend>
+              <div class="d-flex flex-column gap-2 mt-2">
+                <label class="form-check-label text-muted">
+                  <input class="form-check-input" type="checkbox" name="interests" value="Volleyball">
+                  Volleyball
+                </label>
+                <label class="form-check-label text-muted">
+                  <input class="form-check-input" type="checkbox" name="interests" value="Chess">
+                  Chess
+                </label>
+              </div>
             </fieldset>
 
             <button type="submit" class="btn btn-primary fw-bold w-100">

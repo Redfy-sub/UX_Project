@@ -53,7 +53,7 @@ let ctiles = [
     teaser: "Hover to see the longest game ever",
     factLabel: "Record Books",
     factTitle: "269 Moves",
-    fact: "The longest tournament game, Nikolić vs. Arsović in 1989, ran 269 moves over more than 20 hours — and still ended in a draw.",
+    fact: "The longest tournament game, Nikolić vs. Arsović in 1989, ran 269 moves over more than 20 hours and still ended in a draw.",
   }
 ];
 
@@ -89,6 +89,7 @@ function getModeData() {
       tiles: ctiles,
       hero: hero.chess,
       frontGradient: "linear-gradient(145deg, #fff9c4 0%, #ffd54f 50%, #D4A017 100%)",
+      frontTextColor: "#212529",
       color: "#ffd54f",
       navLabel: "Chess"
     };
@@ -97,6 +98,7 @@ function getModeData() {
       tiles: vtiles,
       hero: hero.volleyball,
       frontGradient: "linear-gradient(145deg, #dbeafe 0%, #60a5fa 55%, #1E6FBF 100%)",
+      frontTextColor: "#ffffff",
       color: "#7FB6FF",
       navLabel: "Volleyball"
     };
@@ -153,8 +155,8 @@ function renderHighlights() {
           <div class="tff hfront" style="background: ${data.frontGradient}">
             <span class="hfglare"></span>
             <div class="hiwrap">${tile.icon}</div>
-            <h3 class="hctit">${tile.title}</h3>
-            <p>${tile.teaser}</p>
+            <h3 class="hctit" style="color: ${data.frontTextColor}">${tile.title}</h3>
+            <p style="color: ${data.frontTextColor}">${tile.teaser}</p>
             <span class="hchin">Hover to flip</span>
           </div>
           <div class="tff tfb hback">

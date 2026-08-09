@@ -31,6 +31,14 @@ The project demonstrates how UX, UI, and styling can drastically change the mood
 Because this is a vanilla front-end project, no build steps are required. 
 Simply open `index.html` in any modern web browser to view the site, or run a local development server (e.g. `python -m http.server` or VS Code Live Server) to view it locally.
 
+## UX Design Principles
+
+This project practically applies several core UX frameworks to enhance usability and aesthetics:
+- **Gestalt Principles**: Utilizes *Common Region* in the 3D flip cards (grouping content within styled borders) and *Similarity* in the striped chess data tables.
+- **Nielsen's Heuristics**: Applies *Match Between System & Real World* with the physical-style theme toggle switch, and *Error Prevention* in the "Join Us" form via native validation and strict input types.
+- **Material Design**: Uses *Intentional Motion* for the dynamic hero spotlight tracking the user's cursor, and physical metaphor behaviors for the 3D flip cards.
+- **Apple HIG**: Establishes *Depth* through the interactive spotlight masking layer, and *Clarity* via the sticky navigation bar, ensuring core content and escape routes are always visible.
+
 ## AI Usage
 
 The images in this project were generated using AI with the following prompts:

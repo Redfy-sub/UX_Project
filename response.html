@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Response page</title>
+
+</head>
+<body>
+  <h1>Response Received!</h1>
+  <p>Thank you for submitting. Here is the data we received:</p>
+  
+  <pre id="output"></pre>
+  
+  <a href="join_us.html">← Back to Form</a>
+
+  <script>
+    const output = document.getElementById('output');
+    const params = new URLSearchParams(window.location.search);
+    
+    if (Array.from(params).length === 0) {
+      output.textContent = "No data submitted.";
+    } else {
+      for (const [key, value] of params) {
+        output.textContent += `${key}: ${value}\n`;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -5,7 +5,6 @@ let radius = 100;
 
 let ptiles = [
   {
-<<<<<<< HEAD
     icon: "<i class=\"bi bi-music-note-beamed fs-1 mb-3 d-inline-block\"></i>",
     title: "Piano",
     teaser: "Hover to reveal a fun fact about this instrument",
@@ -20,35 +19,14 @@ let ptiles = [
     factLabel: "Keyboard Layout",
     factTitle: "52 White, 36 Black",
     fact: "A standard piano has 88 keys spanning just over seven octaves — 52 white keys and 36 black keys — giving players an enormous range of pitch and tone.",
-=======
-    icon: "<i class=\"bi bi-globe fs-1 mb-3 d-inline-block\"></i>",
-    title: "Volleyball",
-    teaser: "Hover to reveal a fun fact about this sport",
-    factLabel: "Did You Know?",
-    factTitle: "The Origin",
-    fact: "Volleyball was invented in 1895 by William G. Morgan as a less strenuous alternative to basketball. The longest recorded game lasted 75 hours and 30 minutes!",
-  },
-  {
-    icon: "<i class=\"bi bi-people fs-1 mb-3 d-inline-block\"></i>",
-    title: "Six on the Court",
-    teaser: "Hover to see how a team is built",
-    factLabel: "Team Structure",
-    factTitle: "Constant Rotation",
-    fact: "Six players take each side — three front-row attackers and three back-row defenders. Players rotate clockwise on every side-out, so everyone learns every role.",
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
   },
   {
     icon: "<i class=\"bi bi-clock-history fs-1 mb-3 d-inline-block\"></i>",
     title: "The Name",
     teaser: "Hover to learn where the name came from",
     factLabel: "Etymology",
-<<<<<<< HEAD
     factTitle: "From Pianoforte",
     fact: "The instrument's full name, \"pianoforte,\" combines the Italian words for \"soft\" and \"loud\" — a nod to its groundbreaking ability to vary volume with touch.",
-=======
-    factTitle: "From Mintonette",
-    fact: "Morgan first called the game \"Mintonette.\" It was renamed soon after for the volleying of the ball back and forth over the net.",
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
   }
 ];
 
@@ -80,21 +58,12 @@ let ctiles = [
 ];
 
 let hero = {
-<<<<<<< HEAD
   piano: {
     eyebrow: "Piano",
     subtitle: "Eighty-eight keys, endless expression. Discover the instrument that rewards patient practice.",
     cta: "Explore Piano",
     baseImage: "assets/piano_hero.jpg",
     baseAlt: "A pianist's hands poised over the keys of a grand piano",
-=======
-  volleyball: {
-    eyebrow: "Volleyball",
-    subtitle: "Six players. One court. Discover the sport that blends power, speed, and teamwork.",
-    cta: "Explore Volleyball",
-    baseImage: "assets/piano_hero.jpg",
-    baseAlt: "A volleyball player leaping to spike the ball over the net",
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
     revealImage: "assets/chess_hero.jpg",
     revealAlt: "A dramatic close-up of an ornate chess knight piece",
     ringColor: "#D4A01780"
@@ -106,21 +75,13 @@ let hero = {
     baseImage: "assets/chess_hero.jpg",
     baseAlt: "A dramatic close-up of an ornate chess knight piece",
     revealImage: "assets/piano_hero.jpg",
-<<<<<<< HEAD
     revealAlt: "A pianist's hands poised over the keys of a grand piano",
-=======
-    revealAlt: "A volleyball player leaping to spike the ball over the net",
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
     ringColor: "#F5C51873"
   }
 };
 
 
-<<<<<<< HEAD
 let mode = "piano";
-=======
-let mode = "volleyball";
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
 
 function getModeData() {
   if (mode === "chess") {
@@ -134,21 +95,12 @@ function getModeData() {
     };
   } else {
     return {
-<<<<<<< HEAD
       tiles: ptiles,
       hero: hero.piano,
       frontGradient: "linear-gradient(145deg, #dbeafe 0%, #60a5fa 55%, #1E6FBF 100%)",
       frontTextColor: "#ffffff",
       color: "#7FB6FF",
       navLabel: "Piano"
-=======
-      tiles: vtiles,
-      hero: hero.volleyball,
-      frontGradient: "linear-gradient(145deg, #dbeafe 0%, #60a5fa 55%, #1E6FBF 100%)",
-      frontTextColor: "#ffffff",
-      color: "#7FB6FF",
-      navLabel: "Volleyball"
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
     };
   }
 }
@@ -156,22 +108,14 @@ function getModeData() {
 
 // The logic functions
 function setMode(nextMode) {
-<<<<<<< HEAD
   if (nextMode !== "piano" && nextMode !== "chess") return;
-=======
-  if (nextMode !== "volleyball" && nextMode !== "chess") return;
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
   mode = nextMode;
   localStorage.setItem(key, mode);
   applyMode();
 }
 
 function toggleMode() {
-<<<<<<< HEAD
   setMode(mode === "chess" ? "piano" : "chess");
-=======
-  setMode(mode === "chess" ? "volleyball" : "chess");
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
 }
 
 function updateHeroContent() {
@@ -235,11 +179,7 @@ function renderHobbyNav() {
   if (label) label.textContent = getModeData().navLabel;
   if (menu) menu.innerHTML = mode === "chess" 
     ? '<li><a class="dropdown-item fw-medium" href="./chess_matches.html">Matches</a></li><li><a class="dropdown-item fw-medium" href="./chess_openings.html">Openings</a></li>' 
-<<<<<<< HEAD
     : '<li><a class="dropdown-item fw-medium" href="./piano_index.html">Home</a></li><li><a class="dropdown-item fw-medium" href="./Piano_Models.html">Products</a></li>';
-=======
-    : '<li><span class="dropdown-item text-muted">More coming soon...</span></li>';
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
 }
 
 function applyMode() {
@@ -269,11 +209,7 @@ function initSpotlight() {
 
 const toggleHTML = `
   <span class="mti" style="font-size: 14px;">
-<<<<<<< HEAD
     <i class="bi bi-music-note-beamed mtiv"></i>
-=======
-    <i class="bi bi-globe mtiv"></i>
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
     <i class="bi bi-grid-3x3 mtic"></i>
   </span>
   <span class="mtk"></span>
@@ -310,11 +246,7 @@ function initRevealAnimations() {
 
 function init() {
   let pref = localStorage.getItem(key);
-<<<<<<< HEAD
   if (pref === "piano" || pref === "chess") {
-=======
-  if (pref === "volleyball" || pref === "chess") {
->>>>>>> ed0e4187f7fa4d004fe62c6fbe5c7f6fba18b86d
     mode = pref;
   }
 

@@ -1,11 +1,11 @@
 # Two Minds Two Passions
 
-A front-end web project built for a school UX Design assignment. This project showcases a unique dual-theme design, exploring two distinct passions: **Volleyball** and **Chess**. 
+A front-end web project built for a school UX Design assignment. This project showcases a unique dual-theme design, exploring two distinct passions: **Piano** and **Chess**. 
 
 ## Concept
 
 "Two Minds Two Passions" is a single website with two entirely different visual identities and themes. By clicking the toggle switch in the footer or using the navigation links, users can flip the site between two modes:
-- 🏐 **Volleyball Mode**: A vibrant, high-energy light theme focusing on the power and athleticism of volleyball.
+- 🎹 **Piano Mode**: A vibrant, expressive light theme focusing on the art and discipline of playing the piano.
 - ♟️ **Chess Mode**: A sleek, focused dark theme centered around the calculated strategy and intellect of chess.
 
 The project demonstrates how UX, UI, and styling can drastically change the mood and messaging of a digital interface while maintaining the same underlying HTML structure.

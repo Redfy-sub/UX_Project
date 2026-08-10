@@ -39,10 +39,16 @@
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
 
-          <h1 class="fw-bold text-center mb-5">Upright Pianos</h1>
+          <h1 class="fw-bold text-center mb-4">Our Pianos</h1>
+
+          <div class="d-flex gap-2 justify-content-center mb-5">
+            <button type="button" class="filter-btn btn btn-outline-primary active" data-filter="all">All</button>
+            <button type="button" class="filter-btn btn btn-outline-primary" data-filter="upright">Upright</button>
+            <button type="button" class="filter-btn btn btn-outline-primary" data-filter="grand">Grand</button>
+          </div>
 
           <div class="row g-4 justify-content-center mb-5">
-            <div class="col-md-4">
+            <div class="col-md-4 piano-card" data-category="upright">
               <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style="background-color: var(--cardbg);">
                 <img src="Images/YUS5_Piano.jpg" class="card-img-top object-fit-cover" style="height: 260px;" alt="YUS Series upright piano">
                 <div class="card-body text-center">
@@ -50,7 +56,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 piano-card" data-category="upright">
               <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style="background-color: var(--cardbg);">
                 <img src="Images/U1_Piano.jpg" class="card-img-top object-fit-cover" style="height: 260px;" alt="U Series upright piano">
                 <div class="card-body text-center">
@@ -58,7 +64,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 piano-card" data-category="upright">
               <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style="background-color: var(--cardbg);">
                 <img src="Images/JU109_Piano.jpg" class="card-img-top object-fit-cover" style="height: 260px;" alt="JU/JX Series upright piano">
                 <div class="card-body text-center">
@@ -68,10 +74,8 @@
             </div>
           </div>
 
-          <h1 class="fw-bold text-center mb-5">Grand Pianos</h1>
-
           <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-4 piano-card" data-category="grand">
               <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style="background-color: var(--cardbg);">
                 <img src="Images/GC1_Piano.jpg" class="card-img-top object-fit-cover" style="height: 260px;" alt="GC Series grand piano">
                 <div class="card-body text-center">
@@ -79,7 +83,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 piano-card" data-category="grand">
               <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100" style="background-color: var(--cardbg);">
                 <img src="Images/GB1K_Piano.jpg" class="card-img-top object-fit-cover" style="height: 260px;" alt="GB1K grand piano">
                 <div class="card-body text-center">
@@ -121,6 +125,6 @@
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/main.js"></script>
-</body>
+  <script src="./js/piano.js"></script>
 
 </html>
